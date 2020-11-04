@@ -1,13 +1,11 @@
-package com.example.demo.dto.group;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+package com.example.demo.dto;
 import lombok.Data;
 
 import javax.xml.bind.annotation.*;
 
 @Data
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Group {
+public class GroupType {
     @XmlAttribute(name="name")
     private String name;
 }
