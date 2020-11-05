@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.Credentials;
 import com.example.demo.dto.TsRequest;
-import com.example.demo.dto.User;
 import com.example.demo.util.RestClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
