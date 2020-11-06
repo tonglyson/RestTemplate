@@ -7,9 +7,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 //log
-//change somthing 
+//change somthing
 @RestController
 public class UserController {
+    private String a= "commit lan 1";
     private static final String USER="api/3.9/sites/507f2aa0-a887-4f27-9ef6-5a5be17e0517/users";
     private static final String GROUP="api/3.9/sites/507f2aa0-a887-4f27-9ef6-5a5be17e0517/groups";
     @Autowired
@@ -35,4 +36,5 @@ public class UserController {
     public ResponseEntity<String> deleteUserFromSite(@PathVariable String userId){
         return restClient.deleteUserFromSite(USER,userId);
     }
+
 }
