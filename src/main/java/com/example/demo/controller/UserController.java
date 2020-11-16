@@ -2,18 +2,17 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.TsRequest;
 import com.example.demo.util.RestClient;
+
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-//log
-//change somthing
+
 @RestController
 public class UserController {
-    private String a= "commit lan 1";
-    private String b = "commit lan 2";
-    private static final String USER="api/3.9/sites/507f2aa0-a887-4f27-9ef6-5a5be17e0517/users";
-    private static final String GROUP="api/3.9/sites/507f2aa0-a887-4f27-9ef6-5a5be17e0517/groups";
+    private static final String USER="api/{version}/sites/{siteId}/users";
+    private static final String GROUP="api/{version}/sites/{siteId}/groups";
     @Autowired
     private RestClient restClient;
     @GetMapping("users")
