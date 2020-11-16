@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ServiceTest {
+public class LoginServiceTest {
     @MockBean
     private RestTemplate restTemplate;
 
@@ -40,8 +40,6 @@ public class ServiceTest {
         HttpEntity<Login> httpEntity = new HttpEntity<>(login,headers);
         Mockito.when(restTemplate.postForEntity("http://192.168.7.18/api/3.9/auth/signin",httpEntity,String.class))
         .thenReturn(ResponseEntity.ok().build());
-
         Assert.assertEquals(HttpStatus.OK,restClient.login("api/3.9/auth/signin",login).getStatusCode());
-
     }
 }

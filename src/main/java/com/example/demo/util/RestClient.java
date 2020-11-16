@@ -5,6 +5,7 @@ import com.example.demo.dto.TsRequest;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -34,7 +35,7 @@ public class RestClient {
     private RestTemplate restTemplate;
 
     public RestClient(){
-        restTemplate = new RestTemplate();
+        this.restTemplate = new RestTemplate();
     }
 
     public ResponseEntity<String> login(String url, Login login){
